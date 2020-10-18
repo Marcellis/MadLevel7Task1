@@ -1,19 +1,25 @@
 package com.example.madlevel7task1
 
 import android.os.Bundle
+import com.google.android.material.floatingactionbutton.FloatingActionButton
+import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
+import androidx.navigation.findNavController
 import com.google.firebase.FirebaseApp
 import com.google.firebase.firestore.FirebaseFirestore
-import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+        setSupportActionBar(findViewById(R.id.toolbar))
 
-        FirebaseFirestore.setLoggingEnabled(true)
-        FirebaseApp.initializeApp(this)
+        findViewById<FloatingActionButton>(R.id.fab).setOnClickListener { view ->
+
+            FirebaseFirestore.setLoggingEnabled(true)
+            FirebaseApp.initializeApp(this)
+            findNavController(R.id.nav_host_fragment).navigate(R.id.createProfileFragment)
+        }
     }
 }

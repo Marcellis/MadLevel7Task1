@@ -2,15 +2,21 @@ package com.example.madlevel7task1
 
 import android.net.Uri
 import android.os.Bundle
-import android.util.Log
+import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
+import android.widget.Button
 import androidx.fragment.app.activityViewModels
 import androidx.lifecycle.Observer
+import androidx.navigation.fragment.findNavController
+import kotlinx.android.synthetic.main.fragment_create_profile.*
+import kotlinx.android.synthetic.main.fragment_create_profile.ivProfileImage
 import kotlinx.android.synthetic.main.fragment_profile.*
 
+/**
+ * A simple [Fragment] subclass as the second destination in the navigation.
+ */
 class ProfileFragment : Fragment() {
 
     private val viewModel: ProfileViewModel by activityViewModels()
@@ -37,11 +43,9 @@ class ProfileFragment : Fragment() {
 
             tvName.text = getString(R.string.profile_name, profile.firstName, profile.lastName)
             tvDescription.text = profile.description
-            if (profile.imageUri.isNotEmpty()) {
+            if (profile.imageUri!!.isNotEmpty()) {
                 ivProfileImage.setImageURI(Uri.parse(profile.imageUri))
             }
         })
     }
-
 }
-

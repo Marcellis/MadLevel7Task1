@@ -4,25 +4,18 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
     app:startDestination="@id/createProfileFragment">
-
     <fragment
         android:id="@+id/createProfileFragment"
         android:name="com.example.madlevel7task1.CreateProfileFragment"
-        android:label="@string/create_profile_fragment_label"
-        tools:layout="@layout/activity_splash">
-
+        android:label="fragment_create_profile"
+        tools:layout="@layout/fragment_create_profile" >
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
+            android:id="@+id/action_createProfileFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.example.madlevel7task1.ProfileFragment"
-        android:label="@string/profile_fragment_label"
-        tools:layout="@layout/fragment_create_profile">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/createProfileFragment" />
-    </fragment>
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
 </navigation>
