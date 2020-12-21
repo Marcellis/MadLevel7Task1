@@ -36,4 +36,9 @@
     <string name="iv_splash_image_content_description">Splash Screen Logo</string>
     <string name="first_name_hint">First Name</string>
     <string name="last_name_hint">Last Name</string>
+    <string name="fab">FAB</string>
+    <string name="splash_image">Splash Image</string>
+    <string name="profile_image">Profile Image</string>
+    <string name="kevin_martin">Kevin Martin</string>
+    <string name="my_description">My description</string>
 </resources>

@@ -8,7 +8,7 @@
         android:id="@+id/createProfileFragment"
         android:name="com.example.madlevel7task1.CreateProfileFragment"
         android:label="fragment_create_profile"
-        tools:layout="@layout/fragment_create_profile" >
+        tools:layout="@layout/fragment_create_profile">
         <action
             android:id="@+id/action_createProfileFragment_to_profileFragment"
             app:destination="@id/profileFragment" />
